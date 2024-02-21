@@ -28,13 +28,10 @@ public class HttpHandler : MonoBehaviour
     }
     public void ChangeUser()
     {
-        for (int i = 1; i <= 3; i++)
-        {
-            UserId = i;
-            StartCoroutine(GetUsers());
-        }
-        //UserId = Random.Range(1, 3);
-        
+
+        UserId = Mathf.RoundToInt(Random.RandomRange(1, 4));
+        StartCoroutine(GetUsers());
+
     }
 
     IEnumerator GetCharacter(int index)
