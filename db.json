@@ -1,0 +1,26 @@
+{
+
+  "users": [
+    
+    {
+      "id":1,
+      "username":"Santiago",
+      "state":true,
+      "deck":[1,2,3,4,5]
+      
+    },
+    {
+      "id":2,
+      "username":"Manuel",
+      "state":true,
+      "deck":[10,20,30,40,50]
+    },
+    {
+      "id":3,
+      "username":"Andrea",
+      "state":true,
+      "deck":[100,200,300,400,500]
+    }
+  ],
+  "worlds":[1,2,3,4,5,6,7,8]
+}
