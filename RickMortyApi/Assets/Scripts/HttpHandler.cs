@@ -17,6 +17,8 @@ public class HttpHandler : MonoBehaviour
     private RawImage[] Mydeck;
     [SerializeField]
     private TMP_Text[] cardNames;
+    [SerializeField]
+    private GameObject sendRqstButton;
 
     private User MyUser;
 
@@ -28,10 +30,27 @@ public class HttpHandler : MonoBehaviour
     }
     public void ChangeUser()
     {
-
-        UserId = Mathf.RoundToInt(Random.RandomRange(1, 4));
+        if(UserId == 1)
+        {
+            UserId = 2;
+        }
+        if (UserId == 2)
+        {
+            UserId = 3;
+        }
+        if (UserId == 3)
+        {
+            UserId = 1;
+        }
+        //UserId = Mathf.RoundToInt(Random.RandomRange(1, 4));
         StartCoroutine(GetUsers());
+        sendRqstButton.SetActive(false);
 
+
+    }
+    public void Exit()
+    {
+        Application.Quit();
     }
 
     IEnumerator GetCharacter(int index)
