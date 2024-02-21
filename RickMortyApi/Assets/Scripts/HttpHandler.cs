@@ -33,14 +33,17 @@ public class HttpHandler : MonoBehaviour
         if(UserId == 1)
         {
             UserId = 2;
+            
         }
-        if (UserId == 2)
+        else if (UserId == 2)
         {
             UserId = 3;
+            
         }
-        if (UserId == 3)
+        else if (UserId == 3)
         {
             UserId = 1;
+            
         }
         //UserId = Mathf.RoundToInt(Random.RandomRange(1, 4));
         StartCoroutine(GetUsers());
